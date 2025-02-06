@@ -2,11 +2,13 @@
 
 :root {
   font-family: Poppins;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --animation: 0.3s ease-in-out;
+  --color-dark: #1e1e1e;
+  --color-blue: #005bc5;
 }
 
 body,

@@ -2,41 +2,41 @@ import styled from 'styled-components';
 
 const StyledRegisterButton = styled.button`
   padding: 10px 20px;
-  background-color: #1e1e1e;
+  background-color: var(--color-dark);
   color: white;
   width: 110px;
   height: 44px;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  transition: all 0.3s ease-in-out;
+  transition: all var(--animation);
   box-sizing: border-box;
-  border: 2px solid transparent; /* Спочатку border прозорий */
+  border: 2px solid transparent;
 
   &:hover,
   &:focus {
     background-color: white;
-    border-color: #005bc5; /* Міняємо тільки колір бордера */
-    color: #005bc5;
+    border-color: var(--color-blue);
+    color: var(--color-blue);
     cursor: pointer;
   }
 `;
 
 const StyledSignInButton = styled.button`
   padding: 10px 20px;
-  border: 2px solid #1e1e1e;
-  color: #1e1e1e;
+  border: 2px solid var(--color-dark);
+  color: var(--color-dark);
   width: 99px;
   height: 44px;
   text-align: center;
   font-size: 16px;
   font-weight: 600;
-  transition: all 0.3s ease-in-out;
+  transition: all var(--animation);
   box-sizing: border-box;
 
   &:hover,
   &:focus {
-    background-color: #005bc5;
+    background-color: var(--color-blue);
     color: white;
     cursor: pointer;
   }

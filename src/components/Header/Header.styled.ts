@@ -14,7 +14,7 @@ export const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
     font-size: 30px;
     font-weight: 800;
     color: transparent;
-    -webkit-text-stroke: 2px #1e1e1e;
+    -webkit-text-stroke: 2px var(--color-dark);
     letter-spacing: -0.03em;
     line-height: 34px;
   }
@@ -59,22 +59,22 @@ export const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
     }
 
     .navWrapper .list a {
-      color: #1e1e1e;
-      transition: 0.3s ease-in-out;
+      color: var(--color-dark);
+      transition: var(--animation);
     }
 
     .navWrapper .list .listItem {
-      transition: 0.3s ease-in-out;
+      transition: var(--animation);
     }
 
     .navWrapper .list .listItem:hover,
     .navWrapper .list .listItem:focus {
-      color: #005bc5;
+      color: var(--color-blue);
     }
 
     .navWrapper .list a:hover,
     .navWrapper .list a:focus {
-      color: #005bc5;
+      color: var(--color-blue);
     }
 
     .backdrop {
@@ -101,7 +101,7 @@ export const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
     }
 
     .navWrapper ul .dropped li {
-      transition: 0.3s ease-in-out;
+      transition: var(--animation);
       width: 100%;
     }
 
@@ -110,8 +110,8 @@ export const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
       width: 100%;
       padding: 12px 32px;
       text-decoration: none;
-      color: #1e1e1e;
-      transition: color 0.3s ease-in-out;
+      color: var(--color-dark);
+      transition: color var(--animation);
       box-sizing: border-box;
     }
 
@@ -123,7 +123,7 @@ export const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
 
     .navWrapper ul .dropped li:hover a,
     .navWrapper ul .dropped li:focus a {
-      color: #005bc5;
+      color: var(--color-blue);
     }
 
     .dropped {
@@ -135,7 +135,7 @@ export const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
       max-height: ${({ $isDropped }) => ($isDropped ? '500px' : '0')};
       opacity: ${({ $isDropped }) => ($isDropped ? '1' : '0')};
       overflow: hidden;
-      transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      transition: max-height var(--animation), opacity var(--animation);
     }
   }
 `;

@@ -10,7 +10,7 @@ export const DrawerContainer = styled.div<{ $isOpen: boolean }>`
   background-color: white;
   transform: ${({ $isOpen }) =>
     $isOpen ? 'translateX(0)' : 'translateX(100%)'};
-  transition: transform 0.3s ease-in-out;
+  transition: transform var(--animation);
   z-index: 100;
 `;
 
@@ -57,7 +57,7 @@ export const DrawerContent = styled.div<{ $isDropped: boolean }>`
     max-height: ${({ $isDropped }) => ($isDropped ? '500px' : '0')};
     opacity: ${({ $isDropped }) => ($isDropped ? '1' : '0')};
     overflow: hidden;
-    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: max-height var(--animation), opacity var(--animation);
   }
 
   .authButtons {
@@ -67,7 +67,7 @@ export const DrawerContent = styled.div<{ $isDropped: boolean }>`
   }
 
   nav ul li a {
-    color: #1e1e1e;
+    color: var(--color-dark);
     transition: color 0.2s ease-in-out;
   }
 
@@ -77,11 +77,11 @@ export const DrawerContent = styled.div<{ $isDropped: boolean }>`
 
   nav ul li a:hover,
   nav ul li a:focus {
-    color: #005bc5;
+    color: var(--color-blue);
   }
 
   nav ul li p:hover,
   nav ul li p:focus {
-    color: #005bc5;
+    color: var(--color-blue);
   }
 `;

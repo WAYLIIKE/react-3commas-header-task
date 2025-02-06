@@ -77,8 +77,18 @@ const DrawerContent = styled.div<{ $isDropped: boolean }>`
     transition: color 0.2s ease-in-out;
   }
 
-  nav ul li a:hover {
-    color: #ff6600;
+  nav ul li p {
+    transition: color 0.2s ease-in-out;
+  }
+
+  nav ul li a:hover,
+  nav ul li a:focus {
+    color: #005bc5;
+  }
+
+  nav ul li p:hover,
+  nav ul li p:focus {
+    color: #005bc5;
   }
 `;
 

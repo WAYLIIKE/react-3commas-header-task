@@ -98,16 +98,28 @@ const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
       cursor: pointer;
     }
 
+    /* Випадаючий список */
     .navWrapper ul .dropped {
       display: flex;
       flex-direction: column;
       background-color: white;
       border: 1px solid rgba(0, 0, 0, 0.1);
+      min-width: 138px;
     }
 
     .navWrapper ul .dropped li {
-      padding: 16px 32px;
       transition: 0.3s ease-in-out;
+      width: 100%;
+    }
+
+    .navWrapper ul .dropped li a {
+      display: block;
+      width: 100%;
+      padding: 12px 32px;
+      text-decoration: none;
+      color: #1e1e1e;
+      transition: color 0.3s ease-in-out;
+      box-sizing: border-box;
     }
 
     .navWrapper ul .dropped li:hover,
@@ -116,21 +128,17 @@ const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
       cursor: pointer;
     }
 
-    .navWrapper ul .dropped li a {
-      display: block;
-      width: 73px;
-    }
-
-    .navWrapper ul .dropped li:last-child {
-      padding-bottom: 19px;
+    .navWrapper ul .dropped li:hover a,
+    .navWrapper ul .dropped li:focus a {
+      color: #005bc5;
     }
 
     .dropped {
       position: absolute;
-      top: 100%; /* Відображається відразу під "Services" */
-      left: 50%; /* Центруємо підменю */
-      transform: translateX(-50%); /* Центрування */
       top: 37px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
       max-height: ${({ $isDropped }) => ($isDropped ? '500px' : '0')};
       opacity: ${({ $isDropped }) => ($isDropped ? '1' : '0')};
       overflow: hidden;
@@ -141,12 +149,11 @@ const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isDroppedList, setIsDroppedList] = useState<boolean>(false);
 
   const toggleDrawer: () => void = () => {
     setIsOpen(prevState => !prevState);
   };
-
-  const [isDroppedList, setIsDroppedList] = useState<boolean>(false);
 
   const toggleDroppedList: () => void = () => {
     setIsDroppedList(prevState => !prevState);

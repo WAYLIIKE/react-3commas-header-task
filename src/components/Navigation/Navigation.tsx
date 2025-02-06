@@ -14,7 +14,7 @@ export const Navigation = ({
     <>
       <ul className="list">
         <li className="listItem">
-          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/">Home</NavLink>
         </li>
         <li className="listItem">
           <NavLink to="/about">About us</NavLink>

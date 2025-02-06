@@ -1,5 +1,3 @@
-// import { Container } from '../../components/Container/Container';
-
 import { Container } from '../../components/Container/Container';
 import { Header } from '../../components/Header/Header';
 
@@ -8,7 +6,6 @@ const HomePage = () => {
     <>
       <Container>
         <Header />
-        {/* <Container></Container> */}
       </Container>
     </>
   );

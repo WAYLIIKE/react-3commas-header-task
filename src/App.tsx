@@ -6,7 +6,7 @@ const ErrorPage = lazy(() => import('./pages/ErrorPage/ErrorPage'));
 
 export const App = () => {
   return (
-    <Router>
+    <Router basename="/react-3commas-header-task">
       <Routes>
         <Route index element={<HomePage />} />
         <Route path="*" element={<ErrorPage />} />

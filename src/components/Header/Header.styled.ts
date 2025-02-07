@@ -16,7 +16,7 @@ export const ResponsiveHeader = styled.header<{ $isDropped: boolean }>`
     color: transparent;
     -webkit-text-stroke: 2px var(--color-dark);
     letter-spacing: -0.03em;
-    line-height: 34px;
+    line-height: 1.13;
   }
 
   .buttonWrapper {

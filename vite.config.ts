@@ -1,20 +1,16 @@
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { copyFileSync } from 'fs';
+import react from '@vitejs/plugin-react-swc';
+import svgr from 'vite-plugin-svgr';
 
 export default defineConfig({
-  base: '/react-3commas-header-task/',
-  plugins: [
-    react(),
-    {
-      name: 'create-404-page',
-      apply: 'build',
-      writeBundle() {
-        copyFileSync('dist/index.html', 'dist/404.html');
-      },
+  plugins: [react(), svgr()],
+  resolve: {
+    alias: {
+      src: '/src',
+      components: '/src/components',
+      pages: '/src/pages',
+      assets: '/src/assets',
     },
-  ],
-  build: {
-    outDir: 'dist',
   },
+  base: '/react-3commas-header-task/',
 });
